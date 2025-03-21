@@ -1,9 +1,12 @@
 name: "Context"
-on: ['push']
+on:
+  push:
+    branches:
+      - main
 jobs:
   my-context:
     runs-on: ubuntu-latest
     steps:
       - name: "My steps"
-        run: echo "{github.action}"
+        run: echo ${{ github.action }}
 
