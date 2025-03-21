@@ -1,0 +1,9 @@
+name: "Context"
+on: ['push']
+jobs:
+  my-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "My steps"
+        run: echo "{github.action}"
+
