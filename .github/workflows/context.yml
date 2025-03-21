@@ -8,5 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "My steps"
-        run: echo ${{ github.action }}
+        run: |
+          echo "Acción actual: ${{ github.action }}"
+          echo "Repositorio: ${{ github.repository }}"
+          echo "Evento: ${{ github.event_name }}"
+          echo "Actor (quién hizo el push): ${{ github.actor }}"
 
