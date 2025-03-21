@@ -1,0 +1,19 @@
+name: "Dependent"
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Dependent:
+    runs-on: ubuntu-latest
+    needs: First
+    steps:
+      - name: "Step A"
+        run: echo "world"
+  
+  First:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "two"
+        run: echo "hello"
